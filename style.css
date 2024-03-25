@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body{
+background: url(bg1.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+height: 100vh;
+overflow: hidden;
+}
+.bgc::after{
+    background-color: black;
+}
+/* header */
+    header{
+        position: relative;
+       padding: 0 2 rem;
+    }
+.navbar{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    margin:30px;
+    height: 60px;  
+    width: 100%;
+    max-width: 1200px;
+    font-size: 20px;
+    color: aliceblue;
+    margin-top: 20px;
+}
+a{
+    text-decoration:none ;
+    color: aliceblue;
+}
+
+li{
+    list-style: none;
+}
+
+.logos i{
+    position: relative;
+    top: -10px;
+    left: 10px;
+    font-style: normal;
+    font-size:20px ;
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 20px ;
+  
+}
+
+.navbar .logos img{
+    height: 40px;
+    width: 40px;
+    
+}
+
+.navbar .lists{
+    display: flex;
+    gap: 2rem;
+    color: aliceblue;
+}
+.navbar button{
+    background-color:rgb(247, 107, 8);
+    height: 40px;
+    width: 120px;
+    border: 2px solid rgb(70, 58, 58);
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 60px;
+    
+    
+}
+.navbar .btn{
+    color: aliceblue;
+}
+
+.navbar button:hover{
+    transform: scale(1.05 );
+    
+}
+ a:hover{
+    color:  rgb(247, 107, 8);
+    transform: scale(1.05);
+}
+.toggle_btn{
+    display: none;
+    margin-right: 40px;
+   font-size: 25px;
+}
+/* dropdown-menu */
+
+.dropdown-menu{ 
+     display: none; 
+     /* this is done to not display the dropdown menu initially */
+    position: absolute;
+    right:2rem;
+    width: 300px;
+    top: 60px;
+    padding: 2rem;
+    background: rgba(133, 218, 252, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow:hidden;
+    color: aliceblue;
+    font-size: 16px;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.dropdown-menu li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 20px;
+}
+  
+.dropdown-menu button{
+    background-color:rgb(247, 107, 8);
+    height: 40px;
+    width: 100%;
+    border: 2px solid rgb(70, 58, 58);
+    border-radius: 20px;
+    font-size: 18px;
+   
+}
+.dropdown-menu ul li a:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out; 
+}
+.get-started-btn:hover {
+    color: aliceblue;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out; 
+}
+.dropdown-menu ul .get-started-btn:hover{
+    color: aliceblue;
+}
+
+
+
+/* main section */
+main .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh ;
+    color: aliceblue;
+    row-gap: 10px;
+    max-width: 100%;
+    position:relative;
+    top: 40px;
+}
+.hero p{
+    font-size: 20px;
+   
+}
+.hero .tagline{
+    top: 30px;
+}
+main section h1{
+ color:rgb(253, 249, 242);
+ font-size: 30px;
+ backdrop-filter: 20px;
+}
+#text span{
+    font-size:25px ;
+    color:  rgb(247, 107, 8);
+}
+#tagline span{
+    font-size:25px ;
+    color: rgb(247, 107, 8);
+}
+
+/* responsive */
+@media(max-width:992px){
+    .navbar .lists,
+    .navbar button{
+        display: none;
+    }
+    .toggle_btn{
+        display: block;
+        margin-right: 50px;
+    }
+    main .hero{
+        position:absolute;
+        top: 200px;
+        margin: 30px;
+        display: flex;
+        align-items: baseline;
+        justify-content: last baseline;
+        padding: 20px;
+        
+    }
+}
+.dropdown-menu.open{
+    display: block;
+    backdrop-filter: 100%;
+}
+
+    /* this is done to display the dropdown menu when we click the button. */
+
+    @media(max-width:630px){
+       .dropdown-menu{
+        width: 200px;
+        height: 300px;
+        font-size:12px;
+        overflow: hidden;
+        margin-top:20%;
+        margin-right:50px;
+       }
+       .navbar{
+        height:20vh;
+       }
+       main.hero{
+        font-size: 14px;
+       }
+    }
